@@ -1,12 +1,18 @@
 :root {
   --card-set-gap: 30px;
+  --color-first-title: #212121;
+  --btn: #2196f3;
+  --primary-bg-color: #ffffff;
 }
-.list ul {
+ul {
   list-style: none;
-  margin: 0;
   padding-left: 0;
+  margin: 0;
+}
+li {
   list-style: none;
 }
+
 p,
 h1,
 h2,
@@ -30,8 +36,8 @@ a {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background-color: #ffffff;
-  color: #212121;
+  background-color: var(--primary-bg-color);
+  color: var(--first-title);
 }
 .link {
   display: inline-block;
@@ -47,7 +53,7 @@ body {
 }
 .section {
   padding-bottom: 94px;
-  padding-top: 94px;
+  padding-top: 0px;
 }
 /*----------Header-----------*/
 .header {
@@ -59,22 +65,24 @@ body {
   display: flex;
   justify-content: center;
 }
+.header-list:hover {
+  color: var(--btn);
+}
+
 .header-nav {
   display: flex;
   align-items: center;
 }
 
-.header-item:not(:last-child) {
+.header-item {
   margin-right: 50px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--first-title);
 }
-.header-list:hover {
-  color: #2196f3;
-}
+
 .site-contacts {
   font-weight: 500;
   font-size: 14px;
@@ -83,15 +91,15 @@ body {
   color: #757575;
   text-decoration: none;
 }
+.site-contacts:hover,
+.site-contacts:focus {
+  color: var(--btn);
+}
 .header-contact {
   margin-left: auto;
   display: flex;
   align-items: center;
   gap: 50px;
-}
-.site-contacts:hover,
-.site-contacts:focus {
-  color: #2196f3;
 }
 
 .header-logo {
@@ -105,14 +113,14 @@ body {
   margin-right: 93px;
 }
 .blue-logo {
-  color: #2196f3;
+  color: var(--btn);
 }
 .header-link {
   text-decoration: none;
 }
 .header-link:hover,
 .header-link:focus {
-  color: #2196f3;
+  color: var(--btn);
 }
 
 /*----------Hero-----------*/
@@ -157,7 +165,10 @@ body {
 
 /*----------About-----------*/
 
-.about .about-list {
+.about {
+  padding-top: 94px;
+}
+.about-list {
   display: flex;
   gap: 30px;
 }
@@ -167,7 +178,7 @@ body {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--first-title);
 }
 .about-pre-title {
   font-size: 14px;
@@ -183,10 +194,11 @@ body {
   line-height: 1.166;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--first-title);
 }
 .aside-item {
   width: calc((100% - 60 px) / 3);
+  margin-top: 50px;
 }
 .aside-list {
   display: flex;
@@ -204,20 +216,23 @@ body {
   line-height: 1.166;
   letter-spacing: 0.03em;
   text-align: center;
-  color: #212121;
+  color: var(--first-title);
 }
 .user-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--first-title);
   text-align: center;
   margin-bottom: 10px;
   margin-top: 30px;
 }
 .user-item {
-  width: calc((100% - 60 px) / 3);
+  margin-top: 50px;
+}
+.past-user-item {
+  padding: 30px 0;
 }
 
 .user-pre-title {
@@ -253,20 +268,20 @@ body {
   font-size: 26px;
   line-height: 1.19;
   color: #ffffff;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .footer-blue-logo {
-  color: #2196f3;
+  color: var(--btn);
 }
 
 .footer-subtitle {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: #ffffff;
   text-decoration: none;
   font-style: normal;
+  margin-bottom: 9px;
 }
 .footer-item {
   font-size: 14px;
@@ -275,12 +290,15 @@ body {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-style: normal;
+  list-style: none;
+  margin-bottom: 9px;
 }
 /*----------Portfolio-----------*/
 .benefits-pre-list {
   display: flex;
   gap: 8px;
   justify-content: center;
+  padding: 94px 0 34px;
 }
 .benefits-btn {
   font-family: "Roboto";
@@ -290,7 +308,7 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--first-title);
   background: #f5f4fa;
   border-radius: 4px;
   border: none;
@@ -309,26 +327,28 @@ body {
   color: #ffffff;
 }
 .benefits-list {
-  display: flex;
+  padding: 0;
+  margin: 0;
   list-style: none;
+  display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
-  margin-top: 30px;
-  margin-bottom: 94px;
 }
 .benefits-list > .benefits-item {
-  flex-basis: calc(100% / 3) - var(--card-set-gap);
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
   border: #eeeeee solid 1px;
+}
+.past-benefits-item {
+  margin: 20px 24px;
 }
 .benefits-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-
   color: #212121;
 }
 .benefits-pre-title {
