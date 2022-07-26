@@ -30,9 +30,7 @@ img {
 address {
   font-style: normal;
 }
-a {
-  color: currentColor;
-}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -53,7 +51,7 @@ body {
 }
 .section {
   padding-bottom: 94px;
-  padding-top: 0px;
+  padding-top: 94px;
 }
 /*----------Header-----------*/
 .header {
@@ -179,6 +177,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--first-title);
+  margin-bottom: 10px;
 }
 .about-pre-title {
   font-size: 14px;
@@ -209,7 +208,9 @@ body {
 .user-list {
   display: flex;
   gap: 30px;
+  background-color: #f5f4fa;
 }
+
 .user-title {
   font-weight: 700;
   font-size: 36px;
@@ -217,6 +218,8 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--first-title);
+  padding-top: 94px;
+  background-color: #f5f4fa;
 }
 .user-name {
   font-weight: 500;
@@ -226,7 +229,6 @@ body {
   color: var(--first-title);
   text-align: center;
   margin-bottom: 10px;
-  margin-top: 30px;
 }
 .user-item {
   margin-top: 50px;
@@ -240,8 +242,6 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 30px;
-
   color: #757575;
 }
 /*----------Footer-----------*/
@@ -291,14 +291,17 @@ body {
   text-decoration: none;
   font-style: normal;
   list-style: none;
-  margin-bottom: 9px;
+  padding-bottom: 9px;
 }
 /*----------Portfolio-----------*/
 .benefits-pre-list {
   display: flex;
   gap: 8px;
   justify-content: center;
-  padding: 94px 0 34px;
+  margin-bottom: 50px;
+}
+.benefits-section {
+  padding-top: 94px;
 }
 .benefits-btn {
   font-family: "Roboto";
@@ -316,10 +319,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 125px;
   height: 38px;
-  left: 593px;
-  top: 174px;
+  padding: 6px 22px;
 }
 .benefits-btn:hover,
 .benefits-btn:focus {
@@ -342,7 +343,7 @@ body {
   border: #eeeeee solid 1px;
 }
 .past-benefits-item {
-  margin: 20px 24px;
+  padding: 20px 24px;
 }
 .benefits-name {
   font-weight: 700;
@@ -355,6 +356,5 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-
   color: #757575;
 }
