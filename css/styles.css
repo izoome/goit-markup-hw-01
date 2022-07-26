@@ -30,6 +30,9 @@ img {
 address {
   font-style: normal;
 }
+a {
+  color: currentColor;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -55,9 +58,7 @@ body {
 }
 /*----------Header-----------*/
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border: #ececec solid 1px;
+  border-bottom: #ececec solid 1px;
 }
 .header-list {
   display: flex;
@@ -70,6 +71,7 @@ body {
 .header-nav {
   display: flex;
   align-items: center;
+  padding: 32px 0;
 }
 
 .header-item {
@@ -78,7 +80,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--first-title);
+  color: var(--color-first-title);
 }
 
 .site-contacts {
@@ -218,7 +220,6 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--first-title);
-  padding-top: 94px;
   background-color: #f5f4fa;
 }
 .user-name {
@@ -281,7 +282,6 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-style: normal;
-  margin-bottom: 9px;
 }
 .footer-item {
   font-size: 14px;
@@ -291,7 +291,10 @@ body {
   text-decoration: none;
   font-style: normal;
   list-style: none;
-  padding-bottom: 9px;
+  margin-bottom: 9px;
+}
+.footer-item-post {
+  margin-bottom: 9px;
 }
 /*----------Portfolio-----------*/
 .benefits-pre-list {
