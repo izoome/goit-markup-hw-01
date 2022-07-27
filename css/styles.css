@@ -11,6 +11,7 @@ ul {
 }
 li {
   list-style: none;
+  text-decoration: none;
 }
 
 p,
@@ -32,6 +33,7 @@ address {
 }
 a {
   color: currentColor;
+  text-decoration: none;
 }
 
 body {
@@ -42,6 +44,7 @@ body {
 }
 .link {
   display: inline-block;
+  text-decoration: none;
 }
 .container {
   width: 100%;
@@ -59,6 +62,10 @@ body {
 /*----------Header-----------*/
 .header {
   border-bottom: #ececec solid 1px;
+  padding: 24px 0;
+}
+.header > .container {
+  display: flex;
 }
 .header-list {
   display: flex;
@@ -67,11 +74,19 @@ body {
 .header-list:hover {
   color: var(--btn);
 }
-
+.header-contact {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+}
+.site-contacts {
+  display: flex;
+  margin-left: auto;
+}
 .header-nav {
   display: flex;
   align-items: center;
-  padding: 32px 0;
 }
 
 .header-item {
@@ -81,6 +96,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-first-title);
+  text-decoration: none;
 }
 
 .site-contacts {
@@ -95,12 +111,6 @@ body {
 .site-contacts:focus {
   color: var(--btn);
 }
-.header-contact {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
 
 .header-logo {
   text-decoration: none;
@@ -112,6 +122,7 @@ body {
   color: #000000;
   margin-right: 93px;
 }
+
 .blue-logo {
   color: var(--btn);
 }
@@ -199,18 +210,18 @@ body {
 }
 .aside-item {
   width: calc((100% - 60 px) / 3);
-  margin-top: 50px;
 }
 .aside-list {
   display: flex;
   gap: 30px;
+  margin-top: 50px;
 }
 
 /*----------User-----------*/
 .user-list {
   display: flex;
   gap: 30px;
-  background-color: #f5f4fa;
+  margin-top: 50px;
 }
 
 .user-title {
@@ -220,7 +231,6 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--first-title);
-  background-color: #f5f4fa;
 }
 .user-name {
   font-weight: 500;
@@ -231,9 +241,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
 }
-.user-item {
-  margin-top: 50px;
-}
+
 .past-user-item {
   padding: 30px 0;
 }
@@ -244,6 +252,9 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: #757575;
+}
+.user {
+  background-color: #f5f4fa;
 }
 /*----------Footer-----------*/
 .footer {
